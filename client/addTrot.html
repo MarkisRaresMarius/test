@@ -1,0 +1,92 @@
+<html>
+
+<head>
+    <!-- Meta -->
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <meta content="utf-8" http-equiv="encoding" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Links -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="styles/vue-material.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="libs/vue.js"></script>
+    <script type="text/javascript" src="libs/vue-material.js"></script>
+    <script type="text/javascript" src="libs/axios.js"></script>
+    <script type="text/javascript" src="src/trots-service.js"></script>
+
+    <!-- Tab Info -->
+    <title>Adaugare Trotineta Electrica</title>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar sticky-top navbar-dark bg-dark">
+        <a class="navbar-brand a" href="index.html">
+             Lista Trotinete
+        </a>
+    </nav>
+    <!-- ------------- -->
+
+    <div id="addTrot">
+        <div id="details">
+
+            <div class="title"> Adaugare Trotineta electrica: </div>
+
+            <label>Nume Trotineta:</label>
+            <input type="text" id="name" name="name" ><br><br>
+
+            <label>Viteza maxima (km/h):</label>
+            <input type="text" id="speed" name="speed" ><br><br>
+
+            <label>Dimensiune roti (inch):</label>
+            <input type="text" id="dimensionwheels" name="dimensionwheels" ><br><br>
+
+            <label>Unghi de urcare (grade)</label>
+            <input type="text" id="compressor" name="compressor" ><br><br>
+
+            <label>Culoare:</label>
+            <input type="text" id="collor" name="collor" ><br><br>
+
+            <label>Greutate suportata:</label>
+            <input type="text" id="maxweight" name="maxweight" ><br><br>
+
+            <label>Greutate (Kg):</label>
+            <input type="text" id="weight" name="weight" ><br><br>
+
+            <label>Tip acumulator:</label>
+            <input type="text" id="actype" name="actype" ><br><br>
+
+            <label>Autonomie (km):</label>
+            <input type="text" id="autonomy" name="autonomy" ><br><br>
+
+            <label>Capacitate acumulator:</label>
+            <input type="text" id="capacity" name="capacity" ><br><br>
+
+            <label>Putere motor (W):</label>
+            <input type="text" id="power" name="power" ><br><br>
+
+            <label>Producator:</label>
+            <input type="text" id="producer" name="producer" ><br><br>
+
+            <label>Pret:</label>
+            <input type="text" id="price" name="price" ><br><br>
+
+
+            <br><br><br>
+            <button class="upDt" href="index.html" @click="addTrot()">Adaugare</button>
+            <br><br><br> <br><br><br>
+
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="src/addTrotinete.js"></script>
+   
+</body>
+
+</html>

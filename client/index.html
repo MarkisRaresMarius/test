@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <meta content="utf-8" http-equiv="encoding" />
+    <title>Users manager</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/vue-material.css" />
+    <script type="text/javascript" src="libs/vue.js"></script>
+    <script type="text/javascript" src="libs/vue-material.js"></script>
+    <script type="text/javascript" src="libs/axios.js"></script>
+    <script type="text/javascript" src="src/trots-service.js"></script>
+</head>
+
+<body>
+    <div id="app">
+
+        <div class="title">Trotinete Electrice</div>
+
+        <p style="text-align: center" v-if="trots.length == 0">No trots found</p>
+
+        <ul class="user-list" v-if="trots.length > 0">
+            <li>
+                <div class="user-row-header">
+                    <div class="user-name">Nume</div>
+                    <div class="user-city">Pret</div>
+                </div>
+            </li>
+
+            <li v-for="trot in trots">
+                <div class="">
+                    <a :href="'details.html?id='+trot.id">{{ trot.name }}</a>
+                    <span class=""><i>{{ trot.price }}</i></span>
+                    <button v-on:click="deleteTrot(trot.id)">Delete</button>
+                    <a :href="'update.html?id='+trot.id" target="_self">Update</a>
+                </div>
+            </li>
+        </ul>
+        <a :href="'addTrot.html'">ADAUGARE TROTINETA NOUA</a>
+    </div>
+    <script src="src/app.js"></script>
+</body>
+
+</html>

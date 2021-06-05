@@ -1,0 +1,46 @@
+<html>
+<head>
+    <link rel="stylesheet" href="styles/update.css" />
+    <script type="text/javascript" src="libs/vue.js"></script>
+    <script type="text/javascript" src="libs/axios.js"></script>
+</head>
+<body>
+    <a href="index.html">Home</a>
+    <div id="update">
+        <h1>Actualizare ochelari cu id-ul: {{ id }}</h1> <br>
+        <div class="label">Nume Trotineta:</div>
+        <input type="text" v-model="trot.name"><br></br>
+        <div class="label">Viteza maxima (km/h):</div>
+        <input type="text" v-model="trot.speed"><br></br>
+        <div class="label">Dimensiune roti (inch):</div>
+        <input type="text" v-model="trot.dimensionwheels"><br></br>
+        <div class="label">Unghi urcare:</div>
+        <input type="text" v-model="trot.compressor"><br></br>
+        <div class="label">Culoare:</div>
+        <input type="text" v-model="trot.collor"><br></br>
+        <div class="label"> Greutate suportata:</div>
+        <input type="text" v-model="trot.maxweight"><br></br>
+        <div class="label"> Greutate (Kg):</div>
+        <input type="text" v-model="trot.weight"><br></br>
+        <div class="label">Tip acumulator:</div>
+        <input type="text" v-model="trot.actype"><br></br>
+        <div class="label">Autonomie (km):</div>
+        <input type="text" v-model="trot.autonomy"><br></br>
+        <div class="label">Capacitate acumulator:</div>
+        <input type="text" v-model="trot.capacity"><br></br>
+        <div class="label">Putere motor:</div>
+        <input type="text" v-model="trot.power"><br></br>
+        <div class="label">Producator:</div>
+        <input type="text" v-model="trot.producer"><br></br>
+        <div class="label">Pret:</div>
+        <input type="text" v-model="trot.price"><br></br>
+
+        <button v-on:click="update(trot.id)">Save</button>
+
+        <p>{{message}}</p>
+
+    </div>
+
+    <script src="src/update.js"></script>
+</body>
+</html>
